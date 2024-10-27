@@ -1,0 +1,3 @@
+ArweaveUploaderTest:testUploadToArweave() (gas: 7334)
+Precompile0x69420Test:testReadFromArweave() (gas: 10281)
+Precompile0x69420Test:testUploadToArweave() (gas: 10347)

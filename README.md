@@ -1,66 +1,39 @@
-## Foundry
+# Precompile 0x69420
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+<img src="./logo.webp" width="400px">
+<div>This README provides instructions on how to deploy your smart contract to the WVM testnet using Forge.</div>
 
-Foundry consists of:
+## Example deploy address for Precompile 0x69420
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+[0x38dB0039707Bc60972D79eC8E752CA21aAfb0Ea2](https://explorer.wvm.dev/address/0x38dB0039707Bc60972D79eC8E752CA21aAfb0Ea2)
 
-## Documentation
+## Prerequisites
 
-https://book.getfoundry.sh/
+- [Foundry](https://book.getfoundry.sh/getting-started/installation) installed
+- Your smart contract ready for deployment
 
-## Usage
+## Deployment Steps
 
-### Build
-
-```shell
-$ forge build
+```sh
+export PRIVATE_KEY=0x...
+forge create src/Precompile0x69420.sol:Precompile0x69420 --rpc-url https://testnet-rpc.wvm.dev/ --private-key <private key starting with 0x...> --gas-price 10gwei
 ```
 
-### Test
+## Calling methods
 
-```shell
-$ forge test
+```sh
+cast call 0x38dB0039707Bc60972D79eC8E752CA21aAfb0Ea2 "read_from_arweave(string)" <ArweaveTXID> --rpc-url https://testnet-rpc.wvm.dev
+
+cast call 0x38dB0039707Bc60972D79eC8E752CA21aAfb0Ea2 "upload_to_arweave(st
+ring)" <dataString> --rpc-url https://testnet-rpc.wvm.dev
 ```
+## Notes
 
-### Format
+- The RPC URL `https://testnet-rpc.wvm.dev` is for the WVM testnet.
+- Make sure you have sufficient test tokens for gas fees.
 
-```shell
-$ forge fmt
-```
+## Additional Resources
 
-### Gas Snapshots
+- [WVM Documentation](https://docs.wvm.dev)
+- [Foundry Book](https://book.getfoundry.sh)
 
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
