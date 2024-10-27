@@ -15,7 +15,6 @@
 ## Deployment Steps
 
 ```sh
-export PRIVATE_KEY=0x...
 forge create src/Precompile0x69420.sol:Precompile0x69420 --rpc-url https://testnet-rpc.wvm.dev/ --private-key <private key starting with 0x...> --gas-price 10gwei
 ```
 
@@ -24,8 +23,7 @@ forge create src/Precompile0x69420.sol:Precompile0x69420 --rpc-url https://testn
 ```sh
 cast call 0x38dB0039707Bc60972D79eC8E752CA21aAfb0Ea2 "read_from_arweave(string)" <ArweaveTXID> --rpc-url https://testnet-rpc.wvm.dev
 
-cast call 0x38dB0039707Bc60972D79eC8E752CA21aAfb0Ea2 "upload_to_arweave(st
-ring)" <dataString> --rpc-url https://testnet-rpc.wvm.dev
+cast call 0x38dB0039707Bc60972D79eC8E752CA21aAfb0Ea2 "upload_to_arweave(string)" <dataString> --rpc-url https://testnet-rpc.wvm.dev
 ```
 ## Notes
 
