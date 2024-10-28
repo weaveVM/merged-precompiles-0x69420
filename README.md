@@ -1,3 +1,5 @@
+`// THIS CODE IS LIT 🌿🔥`
+
 ## About
 
 This repository provides instructions on how to deploy your smart contract to the WVM testnet using Forge. It focuses on the Arweave precompiles (0x17, 0x18) to provide a tutorial on how to read and write data to Arweave from the EVM smart contract interface.
