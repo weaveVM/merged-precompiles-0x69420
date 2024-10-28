@@ -6,7 +6,7 @@ This repository provides instructions on how to deploy your smart contract to th
 
 ## Example deploy address for Merged Precompiles 0x69420
 
-[0x38dB0039707Bc60972D79eC8E752CA21aAfb0Ea2](https://explorer.wvm.dev/address/0x38dB0039707Bc60972D79eC8E752CA21aAfb0Ea2)
+[0x9fb0F63B569f9FD8718Bbb2856a4b6F2458C2d70](https://explorer.wvm.dev/address/0x9fb0F63B569f9FD8718Bbb2856a4b6F2458C2d70)
 
 ## Prerequisites
 
@@ -22,10 +22,18 @@ forge create src/MergedPrecompiles0x69420.sol:MergedPrecompiles0x69420 --rpc-url
 ## Calling methods
 
 ```sh
-cast call 0x38dB0039707Bc60972D79eC8E752CA21aAfb0Ea2 "read_from_arweave(string)" <ArweaveTXID> --rpc-url https://testnet-rpc.wvm.dev
+cast call 0x9fb0F63B569f9FD8718Bbb2856a4b6F2458C2d70 "read_from_arweave(string)" <ArweaveTXID> --rpc-url https://testnet-rpc.wvm.dev
 
-cast call 0x38dB0039707Bc60972D79eC8E752CA21aAfb0Ea2 "upload_to_arweave(string)" <dataString> --rpc-url https://testnet-rpc.wvm.dev
+cast call 0x9fb0F63B569f9FD8718Bbb2856a4b6F2458C2d70 "upload_to_arweave(string)" <dataString> --rpc-url https://testnet-rpc.wvm.dev
 ```
+
+Helper method example:
+
+```sh
+sh ./script/upload.sh
+```
+Feel free to substitute / change the contract address
+
 ## Notes
 
 - The RPC URL `https://testnet-rpc.wvm.dev` is for the WVM testnet.
