@@ -1,11 +1,6 @@
-<div align="center">
-  <img src="./logo.webp" width="500px">
-</div>
-<div>
-  
 ## About
 
-This repository provides instructions on how to deploy your smart contract to the WVM testnet using Forge.</div>
+This repository provides instructions on how to deploy your smart contract to the WVM testnet using Forge. It focuses on the Arweave precompiles (0x17, 0x18) to provide a tutorial on how to read and write data to Arweave from the EVM smart contract interface.
 
 ## Example deploy address for Merged Precompiles 0x69420
 
@@ -32,12 +27,13 @@ cast call 0x38dB0039707Bc60972D79eC8E752CA21aAfb0Ea2 "upload_to_arweave(string)"
 ## Notes
 
 - The RPC URL `https://testnet-rpc.wvm.dev` is for the WVM testnet.
-- Make sure you have sufficient test tokens for gas fees.
+- Make sure you have sufficient test tokens from the [faucet](https://wvm.dev/faucet) for gas fees.
 
 ## Additional Resources
 
 - [WVM Documentation](https://docs.wvm.dev)
 - [Foundry Book](https://book.getfoundry.sh)
+- [Arweave Precompiles docs](https://docs.wvm.dev/using-weavevm/weavevm-precompiles)
 
 ## License
 This repository is licensed under the [MIT License](./LICENSE)
